@@ -449,7 +449,7 @@ a {
 }
 
 .back-link {
-  padding: 0 1rem;
+  padding: 1.5rem 1rem;
 }
 }
 .post-body img:active {
@@ -477,7 +477,7 @@ a {
 .back-link {
   display: block;
   font-family: var(--font-mono);
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: var(--accent);
   letter-spacing: 0.05em;
   margin: 1.5rem auto;
