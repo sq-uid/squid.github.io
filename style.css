@@ -28,6 +28,7 @@ body {
   font-family: var(--font-body);
   min-height: 100vh;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -208,6 +209,7 @@ a {
   border: 1px solid var(--border);
   background: var(--black);
   transition: background 0.15s;
+  overflow: hidden;
 }
 
 .post-card:hover {
@@ -218,15 +220,10 @@ a {
   height: 100%;
 }
 
-@media (max-width: 768px) {
-  .post-card {
-    grid-template-columns: 1fr;
-  }
-
 .card-preview {
     display: none;
   }
-}
+
 .card-image {
   width: 100%;
   height: 100%;
@@ -263,17 +260,57 @@ a {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    padding: 0 1rem;
+  }
+
+  .main-content {
+    padding: 1.5rem 1rem 3rem;
+  }
+
   .card-link {
     grid-template-columns: 1fr;
   }
 
   .card-image {
-    height: 180px;
+    height: 200px;
+    width: 100%;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .card-content {
-    padding: 1rem 0;
+    padding: 0.75rem 0;
   }
+
+  .card-title {
+    color: var(--white);
+  }
+
+  .post-card {
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .site-footer {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.post-card:hover .card-title {
+  color: var(--accent);
+}
+
+.card-excerpt {
+  font-size: 1.15rem;
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0.75rem 0 1rem;
+  max-width: none;
 }
 
 .post-card:hover .card-title {
